@@ -1,0 +1,303 @@
+input[type = button]{ 
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+body, html { 
+	margin: 0; padding: 0;
+	background: #202020;
+	font-family:arial;
+}
+body {
+	width: 600px;
+	height: 600px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -300px;
+	margin-top: -300px;
+}
+#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8,#b9{
+	width: 32.7%;
+	height: 32.7%;
+	color: #202020;
+	outline: 1px solid #333;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	transition: all 240ms;
+	position:absolute;
+	width:33.333%;
+	height:33.333%;
+	top:0;left:0;
+	outline:1em solid #202020;
+	outline-offset:-0.5em;
+	color:#fff;
+	z-index:10;
+	opacity:0;
+	pointer-events:none;
+}
+#b1:hover,#b2:hover,#b3:hover,#b4:hover,#b5:hover,#b6:hover,#b7:hover,#b8:hover,#b9:hover{
+	outline:0em solid #202020;
+	outline-offset:0em;
+	z-index:5;
+}
+#t1,#t2,#t3,#t4,#t5,#t6,#t7,#t8,#t9{
+	position:absolute;
+	width:33.333%;
+	height:33.333%;
+	z-index:100;
+	color:#fff;
+	z-index:100;
+	opacity:0;
+	pointer-events:none;
+}
+#b1,#t1{
+	top:0;left:0;
+}
+#b2,#t2{
+	top:0;left:33.333%;
+}
+#b3,#t3{
+	top:0;left:66.666%;
+}
+#b4,#t4{
+	top:33.333%;left:0%;
+}
+#b5,#t5{
+	top:33.333%;left:33.333%;
+}
+#b6,#t6{
+	top:33.333%;left:66.666%;
+}
+#b7,#t7{
+	top:66.666%;left:0;
+}
+#b8,#t8{
+	top:66.666%;left:33.333%;
+}
+#b9,#t9{
+	top:66.666%;left:66.666%;
+}
+.leave{
+	position:absolute;
+	bottom:1em;
+	left:50%;
+	width:50%;
+	margin-left:-25%;
+	margin-bottom:-3em;
+	font-size:2em;
+	opacity:0;
+	pointer-events:none;
+	transition:all 2s;
+	background:#111;
+	color:#888;
+	outline:0;
+	border:0;
+}
+.leave:hover, .replay:hover{
+	color:#888;
+	background:#333;
+}
+.replay{
+	position:absolute;
+	bottom:1em;
+	left:50%;
+	width:50%;
+	margin-left:-25%;
+	margin-bottom:-5em;
+	font-size:2em;
+	opacity:0;
+	pointer-events:none;
+	transition:all 2s;
+	background:#111;
+	color:#888;
+	outline:0;
+	border:0;
+}
+#message{
+	top:50%;
+	position:absolute;
+	margin-top:-11em;
+	left:50%;
+	width:14em;
+	margin-left:-7em;
+	text-align:center;
+	color:#888;
+	font-size:2em;
+	transition:all 600ms;
+}
+.button_hide{
+	opacity:0;
+	pointer-events:none;
+}
+#invitebtn{
+	position:absolute;
+	left:50%;
+	width:50%;
+	top:55%;
+	margin-left:-25%;
+	margin-bottom:-4em;
+	height:2em;
+	font-size:2em;
+	z-index:1000;
+}
+.invite{
+	position:absolute;
+	left:50%;
+	width:50%;
+	top:55%;
+	margin-left:-25%;
+	margin-bottom:-4em;
+	height:2em;
+	font-size:2em;
+	text-align:center;
+	padding:0;
+	outline:0;
+	border:0;
+	transition:all 300ms;
+}
+.code{
+	top:70%;
+	z-index:1200;
+	font-size:1em;
+	padding:1em 0;
+}
+.code:hover{
+	outline:0.3em dotted #679;
+	background:#cef;
+	outline-offset:-0.3em;
+}
+#findgame{
+	position:absolute;
+	left:50%;
+	width:50%;
+	top:30%;
+	margin-left:-25%;
+	margin-bottom:-4em;
+	height:2em;
+	font-size:2em;
+}
+.disabled + .tile{
+	border:0;
+	outline:0;
+	background:#111;
+}
+.disabled{
+	pointer-events:none;
+	opacity:0;
+}
+.x:after{
+	content:"X";
+	color:#ddd;
+	position:absolute;
+	font-size:10em;
+	width:100%;
+	height:100%;
+	text-align:center;
+	margin-top:0.06em;
+}
+.o:after{
+	content:"O";
+	color:#ddd;
+	position:absolute;
+	font-size:8em;
+	width:100%;
+	height:100%;
+	text-align:center;
+	margin-top:0.22em;
+}
+.tilex, .tileo{
+	border:0;
+	outline:0;
+	background:#111;
+	width:100%;
+}
+.tilex + .hide:before{
+	content:"X";
+	color:#13c;
+	font-size:10em;
+	width:100%;
+	height:100%;
+	text-align:center;
+	margin-top:0.06em;
+	z-index:1000;
+	pointer-events:none;
+	position:absolute;
+}
+.tilex + .hide{
+	z-index:1000;
+}
+.tileo + .hide:before{
+	content:"O";
+	color:#c31;
+	font-size:8em;
+	width:100%;
+	height:100%;
+	text-align:center;
+	margin-top:0.22em;
+	z-index:1000;
+	pointer-events:none;
+	position:absolute;
+}
+.tileo + .hide{
+	z-index:1000;
+}
+.x:hover + .tile{
+	background:#13c;
+	-ms-transform: scale(0.5,0.5); 
+	-webkit-transform: scale(0.5); 
+	transform: scale(0.5,0.5);
+}
+
+.o:hover + .tile{
+	background:#c31;
+	-ms-transform: scale(0.5,0.5); 
+	-webkit-transform: scale(0.5); 
+	transform: scale(0.5,0.5);
+}
+.hide{
+	position:absolute;
+	z-index:1;
+	width:33.333%;
+	height:33.333%;
+	transition:all 1s;
+	opacity:0;
+	pointer-events:none;
+}
+.winx{
+	background:rgba(0,0,0,0);
+	box-shadow:0 0 50px -5px #13c;
+	outline:1em solid;
+	outline-offset:-1em;
+	outline-color:#13c;
+	z-index:9999;
+	pointer-events:none;
+}
+.wino{
+	background:rgba(0,0,0,0);
+	box-shadow:0 0 50px -5px #c31;
+	outline:1em solid;
+	outline-offset:-1em;
+	outline-color:#c31;
+	z-index:9999;
+	pointer-events:none;
+}
+.cat{
+	box-shadow:0 0 50px -5px #f06;
+	outline:0em solid;
+	outline-offset:-1em;
+	outline-color:#f06;
+	z-index:9999;
+	pointer-events:none;
+	background:url('http://images4.fanpop.com/image/photos/16800000/neko-maid-anime-neko-16869944-225-225.jpg');
+}
+#h1{left:0;top:0;}
+#h2{left:33.333%;top:0;}
+#h3{left:66.666%;top:0;}
+#h4{left:0;top:33.333%;}
+#h5{left:33.333%;top:33.333%;}
+#h6{left:66.666%;top:33.333%;}
+#h7{left:0;top:66.666%;}
+#h8{left:33.333%;top:66.666%;}
+#h9{left:66.666%;top:66.666%;}

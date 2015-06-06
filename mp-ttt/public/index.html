@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet">
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div id="t1" onclick="board_click(1)"></div>
+		<input type="button" id="b1" class="tile"/>
+		<div id="h1" class="hide"></div>
+		<div id="t2" onclick="board_click(2)" ></div>
+		<input type="button" id="b2" class="tile"/>
+		<div id="h2"  class="hide"></div>
+		<div id="t3" onclick="board_click(3)" ></div>
+		<input type="button" id="b3" class="tile"/>
+		<div id="h3"  class="hide"></div>
+		<div id="t4" onclick="board_click(4)" ></div>
+		<input type="button" id="b4" class="tile"/>
+		<div id="h4"  class="hide"></div>
+		<div id="t5" onclick="board_click(5)" ></div>
+		<input type="button" id="b5" class="tile"/>
+		<div id="h5"  class="hide"></div>
+		<div id="t6" onclick="board_click(6)" ></div>
+		<input type="button" id="b6" class="tile"/>
+		<div id="h6"  class="hide"></div>
+		<div id="t7" onclick="board_click(7)" ></div>
+		<input type="button" id="b7" class="tile"/>
+		<div id="h7"  class="hide"></div>
+		<div id="t8" onclick="board_click(8)"></div>
+		<input type="button" id="b8" class="tile"/>
+		<div  id="h8" class="hide"></div>
+		<div id="t9" onclick="board_click(9)"></div>
+		<input type="button" id="b9" class="tile"/>
+		<div id="h9"  class="hide"></div>
+		<input type="button" class="option" id="findgame"
+		onclick="find_game()" value="find game" />
+		<input type="button" class="option leave" id="leave"
+		onclick="leave_game()" value="leave game" />
+		<input type="button" class="option replay" id="replay"
+		onclick="replay()" value="play again" />
+		<input type="button" class="option" id="invitebtn"
+		onclick="invite_friend()" value="generate invite link" />
+		<input type="text" class="option invite" id="invite"
+		placeholder="invite friend" onclick="this.select();" />
+		<div id="message"></div>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="game.js"></script>
+	</body>
+</html>
